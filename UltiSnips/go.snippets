@@ -1,0 +1,36 @@
+snippet err "if err != nil"
+if err != nil {
+	${1:return}
+}
+endsnippet
+
+snippet forr "for loop"
+for _, ${1:v} := range ${2:vs} {
+	${3://TODO}
+}
+endsnippet
+
+snippet fp "fmt.Print" 
+fmt.Print("${1:v}")
+endsnippet
+
+snippet pf "fmt.Printf" 
+fmt.Printf("${1:kind}",${2:v})
+endsnippet
+
+snippet pl "fmt.Println" 
+fmt.Println(${1})
+endsnippet
+
+snippet sc "switch~case" 
+switch ${1:condition} {
+case ${2:condition} :
+	${3:return}
+case ${4:condition} :
+	${5:return}	
+}
+endsnippet
+
+snippet nt "null struct"
+type ${1:name} struct {}
+endsnippet
