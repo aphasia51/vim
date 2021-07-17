@@ -1,3 +1,5 @@
+" Auther@xiahuas
+
 source $HOME/.config/nvim/settings.vim
 source $HOME/.config/nvim/maps.vim
 source $HOME/.config/nvim/check.vim
