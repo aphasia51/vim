@@ -1,4 +1,3 @@
-
 " coc.nvim
 set hidden
 set updatetime=100

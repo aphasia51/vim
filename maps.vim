@@ -1,4 +1,3 @@
-
 "
 noremap - Nzz
 noremap <LEADER><CR> :nohlsearch<CR>

@@ -1,4 +1,3 @@
-
 " ****插件****
 call plug#begin('~/.config/nvim/plugged')
 
