@@ -43,7 +43,10 @@ endfunction
 " theme
 "let g:SnazzyTransparent = 1
 "color snazzy
+set termguicolors
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 color deus
+hi NonText ctermfg=gray guifg=grey10
 
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
@@ -125,6 +128,12 @@ let g:airline_theme='dracula'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_highlighting_cache = 1    "语法高亮缓存
 "" customize the section
+
+" Leaderf
+let g:Lf_PreviewInPopup = 1
+let g:Lf_PreviewCode = 1
+let g:Lf_ShowHidden = 1
+let g:Lf_ShowDevIcons = 1
 
 
 " Show buffers count

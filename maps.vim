@@ -35,6 +35,8 @@ let g:translator_default_engines=['google','youdao']
 noremap <LEADER>r :TranslateW<CR>
 noremap <LEADER>f :TranslateR<CR>
 
+nnoremap <c-f> :Leaderf file<CR>
+
 " 分屏
 map sj :set splitright<CR>:vsplit<CR>
 map sl :set nosplitright<CR>:vsplit<CR>

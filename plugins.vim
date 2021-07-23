@@ -83,6 +83,12 @@ Plug 'godlygeek/tabular' " type ;Tabularize /= to align the =
 " 选择最近的文本对象
 Plug 'gcmt/wildfire.vim' " in Visual mode, type i' to select all text in '', or type i) i] i} ip
 
+" 模糊查找
+Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+
+" 在nvim中打开ranger
+Plug 'kevinhwang91/rnvimr'
+
 " 快速注释
 Plug 'scrooloose/nerdcommenter' " in <space>cc to comment a line
 
