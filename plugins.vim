@@ -28,7 +28,8 @@ Plug 'ojroques/vim-scrollstatus'
 Plug 'voldikss/vim-floaterm'
 
 " 启动页
-"Plug 'glepnir/dashboard-nvim'
+Plug 'glepnir/dashboard-nvim'
+
 " golang插件
 "Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}    "{ 'for': ['go', 'vim-plug'], 'tag': '*' }
 
@@ -38,14 +39,16 @@ Plug 'theniceboy/vim-snippets'
 
 " fzf插件
 "Plug 'liuchengxu/vim-clap'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug '/usr/local/opt/fzf'
 
 " 翻译
 Plug 'voldikss/vim-translator'
 
 
 " 显示git diff
-"Plug 'airblade/vim-gitgutter'
-
+Plug 'airblade/vim-gitgutter'
 
 " 补全括号，彩虹括号
 Plug 'jiangmiao/auto-pairs'
@@ -55,7 +58,6 @@ Plug 'mg979/vim-xtabline'
 
 " Error checking
 Plug 'w0rp/ale'
-
 
 " 缩进高亮
 Plug 'nathanaelkane/vim-indent-guides'
@@ -78,8 +80,10 @@ Plug 'terryma/vim-multiple-cursors'
 
 " 选中区域插入
 Plug 'tpope/vim-surround' " type ysks' to wrap the word with '' or type cs'` to change 'word' to `word`
+
 " 对齐
 Plug 'godlygeek/tabular' " type ;Tabularize /= to align the =
+
 " 选择最近的文本对象
 Plug 'gcmt/wildfire.vim' " in Visual mode, type i' to select all text in '', or type i) i] i} ip
 
@@ -96,7 +100,7 @@ Plug 'scrooloose/nerdcommenter' " in <space>cc to comment a line
 Plug 'fadein/vim-FIGlet'
 
 " nerdtree
-Plug 'preservim/nerdtree'
+" Plug 'preservim/nerdtree'
 
 " Coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

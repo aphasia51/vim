@@ -24,7 +24,7 @@ noremap <LEADER><CR> :nohlsearch<CR>
 "map s <nop>
 map S :w<CR>
 map Q :q<CR>
-map R :source $MYVIMRC<CR>
+map E :source $MYVIMRC<CR>
 map ; :
 
 " Spell check
@@ -35,7 +35,14 @@ let g:translator_default_engines=['google','youdao']
 noremap <LEADER>r :TranslateW<CR>
 noremap <LEADER>f :TranslateR<CR>
 
-nnoremap <c-f> :Leaderf file<CR>
+" fzf.vim
+nnoremap <c-f> :FZF<CR>
+noremap F :Rg<CR>
+noremap <c-a> :Ag<CR>
+noremap <c-h> :History<CR>
+noremap <leader>h :History:<CR>
+
+"nnoremap <c-f> :Leaderf file<CR>
 
 " 分屏
 map sj :set splitright<CR>:vsplit<CR>
