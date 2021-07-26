@@ -75,6 +75,10 @@ Plug 'vimwiki/vimwiki'
 " 标记位置
 Plug 'kshenoy/vim-signature'
 
+" General Highlighter
+Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
+Plug 'RRethy/vim-illuminate'
+
 " 宏操作
 Plug 'terryma/vim-multiple-cursors'
 

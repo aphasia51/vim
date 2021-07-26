@@ -20,6 +20,7 @@ let g:dashboard_custom_shortcut={
 \ 'change_colorscheme' : 'SPC t c',
 \ }
 
+
 let g:dashboard_custom_shortcut_icon = {}
 let g:dashboard_custom_shortcut_icon['last_session'] = ' '
 let g:dashboard_custom_shortcut_icon['find_history'] = 'ﭯ '
@@ -48,6 +49,14 @@ let g:gitgutter_sign_modified = '░'
 let g:gitgutter_sign_removed = '▏'
 let g:gitgutter_sign_removed_first_line = '▔'
 let g:gitgutter_sign_modified_removed = '▒'
+
+" ===
+" === vim-illuminate
+" ===
+let g:Illuminate_delay = 750
+hi illuminatedWord cterm=undercurl gui=undercurl
+
+let g:Hexokinase_highlighters = ['foreground']
 
 " coc.nvim
 set hidden
