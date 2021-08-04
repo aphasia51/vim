@@ -9,13 +9,13 @@ let g:dashboard_custom_header=[
     \]
 
 let g:dashboard_default_executive ='fzf'
-let g:mapleader="<Space>"
+let g:mapleader=" "
 let g:dashboard_custom_shortcut={
 \ 'last_session'       : 'SPC s l',
-\ 'find_history'       : 'SPC f h',
-\ 'find_file'          : 'SPC f f',
-\ 'new_file'           : 'SPC c n',
-\ 'find_word'          : 'SPC f a',
+\ 'find_history'       : 'CTRL h',
+\ 'find_file'          : 'CTRL f',
+\ 'new_file'           : 'SPC  n',
+\ 'find_word'          : 'Press F',
 \ 'book_marks'         : 'SPC f b',
 \ 'change_colorscheme' : 'SPC t c',
 \ }
@@ -34,7 +34,7 @@ nnoremap <silent> <c-h> :DashboardFindHistory<CR>
 nnoremap <silent> <c-f> :DashboardFindFile<CR>
 nnoremap <silent> F :DashboardFindWord<CR>
 nnoremap <silent> <Leader>fb :DashboardJumpMark<CR>
-nnoremap <silent> <Leader>cn :DashboardNewFile<CR>
+nnoremap <silent> <Leader>n :DashboardNewFile<CR>
 
 " ==
 " == GitGutter
@@ -153,7 +153,7 @@ let g:python_highlight_all = 1
 " let g:python_slow_sync = 0
 
 " translator
-let g:translator_target_lang='auto' 
+let g:translator_target_lang='zh'
 let g:translator_default_engines=['google','youdao']
 noremap <LEADER>f :TranslateW<CR>
 noremap <LEADER>c :TranslateR<CR>
@@ -182,8 +182,9 @@ autocmd WinEnter * silent! unmap <LEADER>ig
 " ===
 " === eleline.vim
 " ===
-"let g:airline_powerline_fonts = 0
+"let g:airline_powerline_fonts = 1
 "let g:eleline_powerline_fonts = 1
+"let g:eleline_slim = 1
 
 let g:scrollstatus_size = 15
 
@@ -193,8 +194,27 @@ let g:scrollstatus_size = 15
 let g:airline_powerline_fonts = 1
 let g:airline_theme='dracula'
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_highlighting_cache = 1    "语法高亮缓存
+"let g:airline_highlighting_cache = 1    "语法高亮缓存
 "" customize the section
+
+" highlight
+let g:semshi#filetypes = ['python']
+hi semshiLocal           ctermfg=209 guifg=#ff875f
+hi semshiGlobal          ctermfg=214 guifg=#D8BFD8
+hi semshiImported        ctermfg=214 guifg=#ffaf00 cterm=bold gui=bold
+hi semshiParameter       ctermfg=75  guifg=#5fafff
+hi semshiParameterUnused ctermfg=117 guifg=#87d7ff cterm=underline gui=underline
+hi semshiFree            ctermfg=218 guifg=#ffafd7
+hi semshiBuiltin         ctermfg=207 guifg=#ff5fff
+hi semshiAttribute       ctermfg=49  guifg=#00ffaf
+hi semshiSelf            ctermfg=249 guifg=#DA70D6
+hi semshiUnresolved      ctermfg=226 guifg=#ffff00 cterm=underline gui=underline
+hi semshiSelected        ctermfg=231 guifg=#ffffff ctermbg=161 guibg=#d7005f
+
+hi semshiErrorSign       ctermfg=231 guifg=#ffffff ctermbg=160 guibg=#d70000
+hi semshiErrorChar       ctermfg=231 guifg=#ffffff ctermbg=160 guibg=#d70000
+sign define semshiError text=E> texthl=semshiErrorSign
+
 
 " Leaderf
 let g:Lf_WindowPosition = 'popup'

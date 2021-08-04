@@ -12,6 +12,10 @@ Plug 'dracula/vim'
 "Plug 'theniceboy/vim-deus'
 Plug 'ryanoasis/vim-devicons'
 
+" Highlight
+Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
+
+
 " airline 依赖
 "Plug 'tpope/vim-fugitive'
 " gitgutter
@@ -22,6 +26,7 @@ Plug 'theniceboy/vim-deus'
 
 " Status line
 "Plug 'theniceboy/eleline.vim'
+"Plug 'liuchengxu/eleline.vim'
 Plug 'ojroques/vim-scrollstatus'
 
 " 浮动终端
