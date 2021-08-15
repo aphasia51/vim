@@ -58,6 +58,14 @@ hi illuminatedWord cterm=undercurl gui=undercurl
 
 let g:Hexokinase_highlighters = ['foreground']
 
+" 让Ranger取代Netrw并成为文件浏览器
+let g:rnvimr_enable_ex = 1
+" 选择文件后隐藏游侠
+let g:rnvimr_enable_picker = 1
+
+" 补全
+let g:deoplete#enable_at_startup = 1
+
 " coc.nvim
 set hidden
 set updatetime=100
@@ -200,7 +208,7 @@ let g:airline#extensions#tabline#enabled = 1
 " highlight
 let g:semshi#filetypes = ['python']
 hi semshiLocal           ctermfg=209 guifg=#ff875f
-hi semshiGlobal          ctermfg=214 guifg=#D8BFD8
+hi semshiGlobal          ctermfg=214 guifg=#ffffff
 hi semshiImported        ctermfg=214 guifg=#ffaf00 cterm=bold gui=bold
 hi semshiParameter       ctermfg=75  guifg=#5fafff
 hi semshiParameterUnused ctermfg=117 guifg=#87d7ff cterm=underline gui=underline

@@ -41,10 +41,13 @@ Plug 'glepnir/dashboard-nvim'
 " snippets
 Plug 'theniceboy/vim-snippets'
 
+" 补全
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " fzf插件
 "Plug 'liuchengxu/vim-clap'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 Plug 'junegunn/fzf.vim'
 Plug '/usr/local/opt/fzf'
 
@@ -62,7 +65,8 @@ Plug 'luochen1990/rainbow'
 Plug 'mg979/vim-xtabline'
 
 " Error checking
-Plug 'w0rp/ale'
+"Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 
 " 缩进高亮
 Plug 'nathanaelkane/vim-indent-guides'
@@ -113,6 +117,5 @@ Plug 'fadein/vim-FIGlet'
 
 " Coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 Plug 'prabirshrestha/vim-lsp'
 call plug#end()

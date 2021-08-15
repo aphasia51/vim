@@ -15,6 +15,7 @@ set smartcase
 set termguicolors " enable true colors support
 set completeopt=menu
 set cmdheight=1
+"set autowriteall
 
 set nocompatible
 filetype on

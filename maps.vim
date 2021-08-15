@@ -63,8 +63,8 @@ map <right> :vertical resize+3<CR>
 
 " 标签切换
 map tp :tabe<CR>
-map t- :-tabnext<CR>
-map t= :+tabnext<CR>
+map t- :tabprevious<CR>
+map t= :tabnext<CR>
 
 map sv <C-w>t<C-w>H
 map sh <C-w>t<C-w>K
