@@ -34,7 +34,6 @@ set listchars=tab:▸\ ,trail:▫
 set scrolloff=5
 set tw=0
 set indentexpr=
-set backspace=indent,eol,start
 set foldmethod=indent
 set foldlevel=99
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
@@ -43,7 +42,6 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 set laststatus=2
 set autochdir
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-
 
 " 运行
 noremap r :call CompileRunGcc()<CR>
@@ -62,12 +60,14 @@ func! CompileRunGcc()
 		set splitbelow
 		:sp
 		:res -5
-		term javac % && time java %<
+		term javac % && java %<
+"term javac % && time java %<
 	elseif &filetype == 'sh'
 		:!time bash %
 	elseif &filetype == 'python'
 		set splitbelow
 		:sp
+    :res -2
 		:term python3 %
 	elseif &filetype == 'html'
 		silent! exec "!".g:mkdp_browser." % &"
@@ -86,6 +86,7 @@ func! CompileRunGcc()
 	elseif &filetype == 'go'
 		set splitbelow
 		:sp
+    :res -2
     :term go build .
 		:term go run .
 	endif
