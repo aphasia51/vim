@@ -29,6 +29,17 @@ return packer.startup {
     -- *** editor *** --
 
     use {
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+      ft = "markdown",
+      setup = function()
+        vim.g.mkdp_browser = "firefox"
+        vim.g.mkdp_open_to_the_world = 1
+        vim.g.mkdp_port = "57843"
+      end,
+    }
+
+    use {
       "neovim/nvim-lspconfig",
       config = function()
         require "editor.lspconfig"
