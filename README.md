@@ -1,8 +1,12 @@
-## Nvim Confgis
-- less than 40 plugins
-- and more
+## ✅About
+Neovim configuration written in lua
 
-### Install
+## 💥Features
+- 👻 Less than 40 plugins
+- 🏂 The start speed is fast
+- 🥳 No useless plugin
+
+### 👹Install
 ```
 git clone https://gitee.com/xiahuas/nvim.git ~/.config/nvim
 ```
