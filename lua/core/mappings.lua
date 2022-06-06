@@ -66,6 +66,10 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- *** Plugins keymaps *** --
 
+-- Telescope
+keymap("n", ";f", "<cmd>Telescope find_files<CR>", opts)
+keymap("n", ";l", "<cmd>Telescope live_grep<CR>", opts)
+
 -- Bufferline
 keymap("n", "<S-z>", "<cmd>cclose<CR>", opts)
 
@@ -76,3 +80,7 @@ keymap("n", "<leader>r", ":AsyncTask file-build<CR>", opts)
 
 -- Nvim-Tree
 keymap("n", "<A-m>", "<cmd>NvimTreeToggle<CR>", opts)
+keymap("n", "<A-n>", "<cmd>NvimTreeFindFile<CR>", opts)
+
+-- Symbols outline
+keymap("n", "so", "<cmd>SymbolsOutline<CR>", opts)

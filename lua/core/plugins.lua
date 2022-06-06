@@ -1,6 +1,7 @@
 -- vim:foldmethod=marker
 ---@diagnostic disable: different-requires
 -- Automatically download packer.nvim if it doesn't exist
+local options = "ui.theme"
 local fn = vim.fn
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -119,6 +120,14 @@ return packer.startup {
       after = "nvim-treesitter"
     }
 
+    use {
+      "glepnir/smartinput.nvim",
+      ft = "go",
+      config = function()
+        require "editor.smart_input"
+      end
+    }
+
     -- *** UI *** --
     use {
       "onsails/lspkind-nvim",
@@ -156,10 +165,9 @@ return packer.startup {
       "glepnir/zephyr-nvim",
       config = function ()
         require "ui.theme"
-      end,
-      after = "nvim-treesitter"
+      end
+      --after = "nvim-treesitter" with this, icons are no color
     }
-
     use {
       "akinsho/nvim-bufferline.lua",
       config = function()
@@ -234,7 +242,7 @@ return packer.startup {
       requires = "skywind3000/asyncrun.vim",
       cmd = { "AsyncTask" },
       config = function ()
-        vim.g.asyncrun_open = 8
+        vim.g.asyncrun_open = 7
         vim.g.asynctasks_term_rows = 8
         vim.g.asynctasks_term_cols = 80
       end

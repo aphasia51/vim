@@ -1,0 +1,3 @@
+require('smartinput').setup {
+  ['go'] = {';', ':=', ';'}
+}
